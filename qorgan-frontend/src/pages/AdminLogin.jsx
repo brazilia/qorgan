@@ -20,7 +20,7 @@ const AdminLogin = () => {
             if (!res.ok) throw new Error(data.error || "Login failed");
 
             localStorage.setItem("adminToken", data.token);
-            window.location.href = "/admin/dashboard"; // Redirect after login
+            window.location.href = "/admin/cases"; // Redirect after login
         } catch (err) {
             setError(err.message);
         }

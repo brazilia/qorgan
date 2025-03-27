@@ -13,7 +13,7 @@ const LoginPage = () => {
             const response = await axios.post("http://localhost:5000/auth/login", { iin, password });
             localStorage.setItem("token", response.data.token);
             alert("Login successful!");
-            window.location.href = "/dashboard"; // Redirect after login
+            window.location.href = "/"; // Redirect after login
         } catch (err) {
             setError("Invalid credentials");
         }
