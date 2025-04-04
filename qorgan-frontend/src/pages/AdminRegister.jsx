@@ -16,7 +16,7 @@ const AdminRegister = () => {
         e.preventDefault();
         setMessage("");
 
-        const response = await fetch("http://localhost:5000/admin/register", {
+        const response = await fetch("https://qorgan.onrender.com/admin/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

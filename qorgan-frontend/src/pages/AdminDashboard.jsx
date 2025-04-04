@@ -11,7 +11,7 @@ const AdminDashboard = () => {
 
     const fetchCases = async () => {
         try {
-            const res = await fetch("http://localhost:5000/admin/cases", {
+            const res = await fetch("https://qorgan.onrender.com/admin/cases", {
                 headers: { Authorization: `Bearer ${adminToken}` },
             });
             const data = await res.json();
@@ -24,7 +24,7 @@ const AdminDashboard = () => {
 
     const updateStatus = async (caseId, newStatus) => {
         try {
-            const res = await fetch(`http://localhost:5000/admin/cases/${caseId}/status`, {
+            const res = await fetch(`https://qorgan.onrender.com/admin/cases/${caseId}/status`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

@@ -12,7 +12,7 @@ const RegisterPage = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/auth/register", { name, email, password, iin });
+            await axios.post("https://qorgan.onrender.com/auth/register", { name, email, password, iin });
             setMessage("Registration successful! You can now log in.");
         } catch (err) {
             setMessage("Error registering. Try again.");
@@ -55,7 +55,7 @@ const RegisterPage = () => {
                     className="border p-2 rounded"
                     required
                 />
-                <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded">
+                <button type="submit" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded transition-all duration-200">
                     Тіркелу
                 </button>
                 {message && <p>{message}</p>}

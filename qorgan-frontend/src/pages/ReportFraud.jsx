@@ -20,7 +20,7 @@ const ReportFraud = () => {
         }
 
         try {
-            const res = await fetch("http://localhost:5000/cases", {
+            const res = await fetch("https://qorgan.onrender.com/cases", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -10,7 +10,7 @@ const LoginPage = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:5000/auth/login", { iin, password });
+            const response = await axios.post("https://qorgan.onrender.com/auth/login", { iin, password });
             localStorage.setItem("token", response.data.token);
             alert("Login successful!");
             window.location.href = "/"; // Redirect after login
@@ -39,7 +39,7 @@ const LoginPage = () => {
                     className="border p-2 rounded"
                     required
                 />
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+                <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-all duration-200">
                     Login
                 </button>
                 {error && <p className="text-red-500">{error}</p>}

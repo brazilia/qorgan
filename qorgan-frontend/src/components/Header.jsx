@@ -1,19 +1,17 @@
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png"; 
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white py-4">
+    <header className="max-w-4xl mx-auto bg-white py-4 px-6 flex justify-between items-center">
+      <div>
+        <img src={logo} alt="Qorgan Logo" className="h-20 w-auto object-contain" />
+      </div>
       <nav className="flex justify-between items-center px-6">
-        <h1 className="text-lg font-bold">Qorgan</h1>
         <div className="space-x-4">
-          <Link to="/">Home Page</Link>
-          <Link to="/report">Report Fraud</Link>
-          <Link to="/cases">Track Case</Link>
-          <Link to="/admin">Admin Login</Link>
-          <Link to="/auth">Аккаунт</Link>
-          <Link to="/report">Статистика</Link>
-          <Link to="/about">Біз туралы</Link>
-          <Link to="/contact">Байланыс</Link>
+          <Link to="/">Басты бет</Link>
+          <Link to="/report">Өтініш қалдыру</Link>
+          <Link to="/auth">Кіру</Link>
         </div>
       </nav>
     </header>

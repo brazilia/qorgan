@@ -9,14 +9,14 @@ const CasesPage = () => {
     }, []);
 
     const fetchCases = async () => {
-        const res = await axios.get("http://localhost:5000/admin/cases", {
+        const res = await axios.get("https://qorgan.onrender.com/admin/cases", {
             headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` },
         });
         setCases(res.data);
     };
 
     const updateStatus = async (id, newStatus) => {
-        await axios.put(`http://localhost:5000/admin/cases/${id}`, { status: newStatus }, {
+        await axios.put(`https://qorgan.onrender.com/admin/cases/${id}`, { status: newStatus }, {
             headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` },
         });
         fetchCases(); // Refresh cases after update

@@ -7,7 +7,7 @@ const CaseTracking = () => {
   useEffect(() => {
     const fetchCases = async () => {
       try {
-        const res = await fetch("http://localhost:5000/cases", {
+        const res = await fetch("https://qorgan.onrender.com/cases", {
           headers: {
             "Authorization": `Bearer ${token}`,  // 👈 ADD Bearer
             "Content-Type": "application/json"
